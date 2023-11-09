@@ -1,8 +1,12 @@
+import StyledComponentsRegistry from './lib/registry'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Rajdhani } from 'next/font/google'
+import './reset.min.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const rajdhani = Rajdhani({
+  subsets: ['latin'],
+  weight: '300'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={rajdhani.className}>
+        <StyledComponentsRegistry>
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
