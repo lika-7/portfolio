@@ -15,10 +15,11 @@ const Container = styled.nav`
     background-color: #333;
     position:sticky;
     font-size: 30px;
-    color: #ECE7E1;
+    color: #F0F8FF;
     display:flex;
     justify-content: space-between;
     align-items:center;
+    box-shadow: 0 2px 4px #ffffff;
 `
 
 const Navbar = ({categories}:NavbarProps) => {

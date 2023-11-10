@@ -11,7 +11,7 @@ const Container = styled.div`
     display:flex;
     justify-content: space-evenly;
     text-align: right;
-
+    
     h2 {
         font-size: 60px;
         font-weight: 600;
