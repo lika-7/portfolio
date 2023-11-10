@@ -7,8 +7,8 @@ const Contents = styled.ul`
     padding-bottom: 30px;
     gap: 45px;
     flex-direction: row;
-   font-size: 30px;
-   font-weight: 600;
+   font-size: 35px;
+   font-weight: 900;
 `
 interface ItemsProp {
     items: string[]

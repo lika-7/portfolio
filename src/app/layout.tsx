@@ -1,12 +1,12 @@
 import StyledComponentsRegistry from './lib/registry'
 import type { Metadata } from 'next'
-import { Rajdhani } from 'next/font/google'
 import './reset.min.css'
-
-const rajdhani = Rajdhani({
-  subsets: ['latin'],
-  weight: '300'
-})
+import About from './components/section/About'
+import Skill from './components/section/Skill'
+import Project from './components/section/Project'
+import Career from './components/section/Career'
+import Navbar from './components/Navbar'
+import { categories } from './categories/information'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,10 +18,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
+  const content= categories.map(category =>category.content)
+
   return (
     <html lang="en">
-      <body className={rajdhani.className}>
+      <body>
         <StyledComponentsRegistry>
+          <Navbar categories={content}/>
           {children}
         </StyledComponentsRegistry>
       </body>

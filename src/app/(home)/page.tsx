@@ -1,11 +1,18 @@
-import styled from 'styled-components';
-import Navbar from '../components/Navbar';
+import { categories } from '../categories/information';
+import Section from '../components/Section';
+import { Rajdhani } from 'next/font/google'
 
+const rajdhani = Rajdhani({
+  subsets: ['latin'],
+  weight: '300'
+})
 
 export default function Home() {
+  
+  const content= categories.map(category=>category.content)
   return (
-    <main>
-        <Navbar />
+    <main  className={rajdhani.className}>
+        {categories.map((item, i)=>(<Section key={i} $isOdd= {i %2 ==0}>{item.component}</Section>))}
     </main>
   )
 }

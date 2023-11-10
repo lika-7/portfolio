@@ -1,13 +1,17 @@
 'use client'
-
 import React from 'react'
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import NavItem from './NavItem';
 import Logo from './Logo';
 import { InnerStyled } from './style/Styled';
 
+interface NavbarProps {
+    categories: string[]
+}
+
 const Container = styled.nav`
-    ${InnerStyled};
+    ${InnerStyled}
+    top:0;
     background-color: #333;
     position:sticky;
     font-size: 30px;
@@ -17,15 +21,12 @@ const Container = styled.nav`
     align-items:center;
 `
 
-const Navbar = () => {
-    const items= ['About me', 'Skill', 'Project', 'Career']
+const Navbar = ({categories}:NavbarProps) => {
     return (
-        <div>
-            <Container>
-                <Logo />
-                <NavItem items={items}/>
-            </Container>
-        </div>
+        <Container>
+            <Logo />
+            <NavItem items={categories}/>
+        </Container>
     )
 }
 
