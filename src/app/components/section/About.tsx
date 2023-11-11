@@ -11,7 +11,7 @@ const Container = styled.div`
     display:flex;
     justify-content: space-evenly;
     text-align: right;
-    
+    height: 500px;
     h2 {
         font-size: 60px;
         font-weight: 600;
@@ -29,7 +29,9 @@ const SectionOne = styled.div`
 
     img{
         border-radius: 50px;
-        margin: 20px;
+        top:0;
+        bottom: 0;
+        margin: auto 0;
         overflow: hidden;
         object-fit: cover;
     }
@@ -70,7 +72,7 @@ const About = () => {
         <div>
             <Container>
             <SectionOne>
-                <Image src={'/logo.png'} alt="logo-img" width={300} height={250}/>
+                <Image src={'/logo.png'} alt="logo-img" width={400} height={450}/>
             </SectionOne>
             <hr />
             <SectionTwo>

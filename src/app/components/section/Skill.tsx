@@ -12,11 +12,12 @@ const Container = styled.div`
     font-weight: 600;
     font-size: 40px;
     color:#FFD700;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
   ul{
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     font-family: sans-serif;
     margin-bottom: 100px;
@@ -33,6 +34,22 @@ const Container = styled.div`
     
   }
 `
+const SkillList = styled.div`
+  h2 {
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 30px;
+    color:#FFF;
+  }
+  hr {
+    margin-bottom: 30px;
+  }
+  ul {
+    justify-content: left;
+    margin-left: 0;
+  }
+
+`
 
 const Skill = () => {
   return (
@@ -42,11 +59,21 @@ const Skill = () => {
         {coverage.map((item, i)=>(<li key={i}>{item}</li>))}
       </ul>
       <h1>기술 스택</h1>
-      {skill.map((item, i) => (
-        <div key={i}>
-          <h2>{}</h2>
-        </div>
-      ))}
+      {skill.map((item, i) => {
+        const [category, items] = Object.entries(item)[0]
+        return (
+          <SkillList key={i}>
+            <h2>{category}</h2>
+            <hr />
+            <ul>
+              {Array.isArray(items) &&
+                  items.map((subItem, subIndex) => (
+                    <li key={subIndex}>{subItem}</li>
+                  ))}
+            </ul>
+          </SkillList>
+        )
+      })}
 
       
     </Container>
