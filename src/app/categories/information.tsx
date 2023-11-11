@@ -28,10 +28,10 @@ export const skill = [
 ]
 
 export const career = [
-    {'company': '엘트란', 'period': '', 'description': '', 'main': true},
-    {'company': '이몰로지', 'period': '', 'description': '', 'main': false},
-    {'company': '코니스테크', 'period': '', 'description': '', 'main': false},
-    {'company': '삼일데이타시스템', 'period': '', 'description': '', 'main': true},
+    {'company': '엘트란', 'period': '2019.03 ~ 2023.03', 'description': 'IoT, 공장 자동화, 응용프로그램, 웹개발', 'main': true},
+    {'company': '이몰로지', 'period': '2021.03 ~ 2021.06', 'description': 'eTNS 개발 관리, DPN 프로그램 개선 및 내부 자산화', 'main': false},
+    {'company': '코니스테크', 'period': '2020.01 ~ 2020.03', 'description': 'bin센서 운영 전산 시스템 기술 서치, 컨설팅', 'main': false},
+    {'company': '삼일데이타시스템', 'period': '2017.02 ~ 2017.06', 'description': '공장 자동화 시스템 개발', 'main': true},
 ]
 
 export const licence = [

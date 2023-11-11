@@ -20,6 +20,7 @@ const Container = styled.nav`
     justify-content: space-between;
     align-items:center;
     box-shadow: 0 2px 4px #ffffff;
+    z-index: 999;
 `
 
 const Navbar = ({categories}:NavbarProps) => {
