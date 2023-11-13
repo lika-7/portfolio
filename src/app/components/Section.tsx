@@ -16,6 +16,7 @@ const StyledSection= styled.section<SectionProps>`//제네릭 다시 보기
     background-color: ${(props)=> (props.$isOdd ? '#ECE7E1' : '#333')};
     color: ${(props)=> (props.$isOdd ? '#333' : '#ECE7E1')};
     /* height: 700px; */
+    min-height: 100vh;
 `
 
 const Section = ({$isOdd, children}:SectionProps) => {
