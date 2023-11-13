@@ -1,18 +1,14 @@
 import { Client } from '@notionhq/client';
 
-
-const NOTION_API_KEY = 'secret_QRpdpsQ6GxQHtMUAUVMIURnME3aAferFi6XtwWvDLb9';
-const DATABASE_ID = '8c1ae5ed8b6d401392a0286639f17951';
-
 const notion = new Client({
-    auth: NOTION_API_KEY
+    auth: process.env.NOTION_API_KEY
   });
 
 export default async function getNotionData() {
     try {
         // Notion 데이터베이스 쿼리
         const response = await notion.databases.query({
-        database_id: DATABASE_ID,
+        database_id: process.env.DATABASE_ID,
         })
         // console.log(response)
         const data = response.results.map((result) => {

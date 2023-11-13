@@ -8,6 +8,7 @@ import { SectionStyled } from '../style/Styled'
 
 const Container = styled.div`
     ${SectionStyled}
+    margin-top:105px;
     display:flex;
     justify-content: space-evenly;
     text-align: right;
@@ -29,9 +30,8 @@ const SectionOne = styled.div`
 
     img{
         border-radius: 50px;
-        top:0;
-        bottom: 0;
-        margin: auto 0;
+        width: 500px;
+        height: 650px;
         overflow: hidden;
         object-fit: cover;
     }
@@ -72,7 +72,7 @@ const About = () => {
         <div>
             <Container>
             <SectionOne>
-                <Image src={'/logo.png'} alt="logo-img" width={400} height={450}/>
+                <Image src={'/logo.png'} alt="logo-img" width={0} height={0} sizes='auto'/>
             </SectionOne>
             <hr />
             <SectionTwo>
