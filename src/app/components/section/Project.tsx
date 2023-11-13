@@ -17,10 +17,10 @@ interface dataProps {
 }
 
 const Project = () => {
-  const [cover, setCover] = useState<string>();
-  const [tag, setTag] = useState<string>();
+  const [cover, setCover] = useState<string[]>([]);
+  const [tag, setTag] = useState<string[][]>([]);
   const [name, setName] = useState<string[]>([]);
-  const [url, setUrl] = useState<string>();
+  const [url, setUrl] = useState<string[]>([]);
 
   const [src,title,description,categories]= [null,'프로젝트 이름','프로젝트의 설명을 적습니다',['node','사물 인터넷']]
   useEffect(() => {
@@ -59,7 +59,6 @@ const Project = () => {
 
   return (
     <Container>
-      {console.log(tag)}
       {name.map((_,i)=>(
         
         <ImageCard 
