@@ -16,7 +16,7 @@ const Container = styled.a`
     text-decoration:none;
     font-family: sans-serif;
     font-weight: 500;
-    width: 300px;
+    width: 400px;
     border-radius: 10px;
     overflow: hidden;
     margin: 20px;
@@ -34,6 +34,7 @@ const Container = styled.a`
 `
 
 const Content = styled.div`
+    /* margin-top: 0; */
     padding: 20px;
     background-color: #fff;
 `

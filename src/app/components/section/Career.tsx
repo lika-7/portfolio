@@ -2,7 +2,7 @@ import React from 'react'
 
 const Career = () => {
   return (
-    <div>dd</div>
+    <div>작업중입니다!</div>
   )
 }
 
