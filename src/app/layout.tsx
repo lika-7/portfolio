@@ -1,10 +1,6 @@
 import StyledComponentsRegistry from './lib/registry'
 import type { Metadata } from 'next'
 import './reset.min.css'
-import About from './components/section/About'
-import Skill from './components/section/Skill'
-import Project from './components/section/Project'
-import Career from './components/section/Career'
 import Navbar from './components/Navbar'
 import { categories } from './categories/information'
 

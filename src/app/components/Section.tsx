@@ -6,7 +6,8 @@ import { InnerStyled } from './style/Styled'
 
 interface SectionProps {
     $isOdd: boolean,
-    children: ReactNode
+    children: ReactNode,
+    id: string
 }
 
 const StyledSection= styled.section<SectionProps>`//제네릭 다시 보기
@@ -19,9 +20,9 @@ const StyledSection= styled.section<SectionProps>`//제네릭 다시 보기
     min-height: 100vh;
 `
 
-const Section = ({$isOdd, children}:SectionProps) => {
+const Section = ({$isOdd, id, children}:SectionProps) => {
     return (
-        <StyledSection $isOdd={$isOdd}>{children}</StyledSection>
+        <StyledSection $isOdd={$isOdd} id={id}>{children}</StyledSection>
     )
 }
 

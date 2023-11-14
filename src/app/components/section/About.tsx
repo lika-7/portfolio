@@ -8,7 +8,9 @@ import { SectionStyled } from '../style/Styled'
 
 const Container = styled.div`
     ${SectionStyled}
-    margin-top:105px;
+    top:0;
+    bottom:0;
+    margin: auto 0;
     display:flex;
     justify-content: space-evenly;
     text-align: right;
@@ -56,11 +58,11 @@ const SectionTwo = styled.div`
     }
 
     a {
-        font-size:40px;
+        font-size:60px;
         color: #82966f;
         text-decoration:none;
         &:hover{
-            color: #82966f;
+            color: #F08080;
         }
     }
     
@@ -81,7 +83,7 @@ const About = () => {
                 <p><span>거주지: </span>경기도 일산</p>
                 <p>
                     <a 
-                        style={{fontSize: '60px', fontWeight: 600}}
+                        
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=dhwhdtn93@gmail.com" 
                         target="_blank">contact. gmail
                     </a>

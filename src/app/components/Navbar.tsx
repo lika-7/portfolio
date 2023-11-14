@@ -15,7 +15,7 @@ const Container = styled.nav`
     background-color: #333;
     position:sticky;
     font-size: 30px;
-    color: #F0F8FF;
+    color: #FFF;
     display:flex;
     justify-content: space-between;
     align-items:center;
