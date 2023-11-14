@@ -4,22 +4,27 @@ import { Link } from 'react-scroll'
 
 const Contents = styled.ul`
     display: flex;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    
     gap: 45px;
     flex-direction: row;
     font-size: 35px;
     font-weight: 900;
-
+    li {
+        
+    }
     li >a{
+        display:block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &:hover{
+            cursor: pointer;
+        }
         &.active {
         color: #FFB6C1; // 활성 섹션에 대한 색상 지정
         }
     }
 
-    &:hover{
-        cursor: pointer;
-    }
+    
 `
 interface ItemsProp {
     items: string[]
