@@ -3,7 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SectionStyled } from '../style/Styled'
-import { career, education, licence } from '@/app/categories/information'
+import { careers, licence } from '@/app/categories/datas'
 
 const Container = styled.div`
   ${SectionStyled}
@@ -52,8 +52,8 @@ const Career = () => {
         <h1>
           Career
         </h1>
-          {career.map((item, i)=>(
-            <Contents key={i}>
+          {careers.map((item, i)=>(
+            <Contents key={`careers${i}`}>
               <p><span>[ {item.company} ]</span>{item.period}</p>
               <Description>{item.description1}</Description>
               {item.description2? <Description>{item.description2}</Description> : ""}
@@ -64,9 +64,8 @@ const Career = () => {
         <h1>
           Education / license
         </h1>
-        
             {licence.map((item,i)=>(
-              <Contents key={i}>
+              <Contents key={`licence${i}`}>
                 <p><span>[ {item.name} ]</span>{item.period}</p>
                 <Description>{item.description1}</Description>
               </Contents>

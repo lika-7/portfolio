@@ -10,7 +10,7 @@ const rajdhani = Rajdhani({
 
 export default function Home() {
   
-  const content= categories.map(category=>category.content)
+  // const content= categories.map(category=>category.content)
   return (
     <main  className={rajdhani.className}>
         {categories.map((item, i)=>(<Section key={i} $isOdd= {i %2 ==0} id= {item.content}>{item.component}</Section>))}

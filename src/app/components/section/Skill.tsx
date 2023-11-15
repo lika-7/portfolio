@@ -1,13 +1,12 @@
 'use client'
 
-import { coverage, skill } from '@/app/categories/information'
 import React from 'react'
 import styled from 'styled-components'
 import { SectionStyled } from '../style/Styled'
+import { coverage, skills } from '../../categories/datas'
 
 const Container = styled.div`
   ${SectionStyled}
-  
   h1{
     font-weight: 600;
     font-size: 40px;
@@ -31,7 +30,6 @@ const Container = styled.div`
     border-radius: 30px;
     border: 2px solid #FFD700;
     box-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
-    
   }
 `
 const SkillList = styled.div`
@@ -56,13 +54,13 @@ const Skill = () => {
     <Container>
       <h1>개발 커버리지</h1>
       <ul>
-        {coverage.map((item, i)=>(<li key={i}>{item}</li>))}
+        {coverage.map((item, i)=>(<li key={`coverage${i}`}>{item}</li>))}
       </ul>
       <h1>기술 스택</h1>
-      {skill.map((item, i) => {
+      {skills.map((item, i) => {
         const [category, items] = Object.entries(item)[0]
         return (
-          <SkillList key={i}>
+          <SkillList key={`skills${i}`}>
             <h2>{category}</h2>
             <hr />
             <ul>
@@ -74,8 +72,6 @@ const Skill = () => {
           </SkillList>
         )
       })}
-
-      
     </Container>
   )
 }
