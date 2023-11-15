@@ -16,7 +16,7 @@ const Container = styled.a`
     text-decoration:none;
     font-family: sans-serif;
     font-weight: 500;
-    width: 400px;
+    width: 450px;
     border-radius: 10px;
     overflow: hidden;
     margin: 20px;
