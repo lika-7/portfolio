@@ -4,9 +4,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { SectionStyled } from '../style/Styled'
 import { career, education, licence } from '@/app/categories/information'
-career
-licence
-education
 
 const Container = styled.div`
   ${SectionStyled}
