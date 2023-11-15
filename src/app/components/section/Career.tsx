@@ -43,6 +43,7 @@ const Contents = styled.div`
 const Description = styled.p`
   color:#FFF;
   font-size: 20px;
+  margin:25px;
 `
 
 const Career = () => {
