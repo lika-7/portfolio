@@ -73,23 +73,23 @@ const About = () => {
     return (
         <div>
             <Container>
-            <SectionOne>
-                <Image src={'/logo.png'} alt="logo-img" width={0} height={0} sizes='auto'/>
-            </SectionOne>
-            <hr />
-            <SectionTwo>
-                <h2>오종수</h2>
-                <p><span>직업: </span>프리랜서 개발자</p>
-                <p><span>거주지: </span>경기도 일산</p>
-                <p>
-                    <a 
-                        
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=dhwhdtn93@gmail.com" 
-                        target="_blank">contact. gmail
-                    </a>
-                </p>
-            </SectionTwo>
-        </Container>
+                <SectionOne>
+                    <Image src={'/logo.png'} alt="logo-img" width={0} height={0} sizes='auto'/>
+                </SectionOne>
+                <hr />
+                <SectionTwo>
+                    <h2>오종수</h2>
+                    <p><span>직업: </span>프리랜서 개발자</p>
+                    <p><span>거주지: </span>경기도 일산</p>
+                    <p>
+                        <a 
+                            
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=dhwhdtn93@gmail.com" 
+                            target="_blank">contact. gmail
+                        </a>
+                    </p>
+                </SectionTwo>
+            </Container>
         </div>
         
     )
