@@ -83,7 +83,6 @@ const About = () => {
                     <p><span>거주지: </span>경기도 일산</p>
                     <p>
                         <a 
-                            
                             href="https://mail.google.com/mail/?view=cm&fs=1&to=dhwhdtn93@gmail.com" 
                             target="_blank">contact. gmail
                         </a>

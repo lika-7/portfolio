@@ -1,4 +1,5 @@
 import { categories } from '../categories/information';
+import Footer from '../components/Footer';
 import Section from '../components/Section';
 import { Rajdhani } from 'next/font/google'
 
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main  className={rajdhani.className}>
         {categories.map((item, i)=>(<Section key={i} $isOdd= {i %2 ==0} id= {item.content}>{item.component}</Section>))}
+        <Footer/>
     </main>
   )
 }
