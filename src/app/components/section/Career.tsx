@@ -63,7 +63,7 @@ const Career = () => {
       </CareerSection>
       <EducationSection>
         <h1>
-          Education / license
+          Education / License
         </h1>
             {licence.map((item,i)=>(
               <Contents key={`licence${i}`}>
