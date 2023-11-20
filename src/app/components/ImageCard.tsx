@@ -13,36 +13,31 @@ interface ImageCardProps {
 
 const blink = keyframes`
     0%, 50%, 100% {
-        border-color: transparent;
+        border: 3px dashed #ff8c69;
     }
     25%, 75% {
-        border-color: #ff8c69;
-    }
-    100% {
-        border-color: transparent;
+        border: 3px dashed transparent;
     }
 `
 
 const Container = styled.a<{$select: boolean}>`
-    
+    display:block;
     color:#333;
     text-decoration:none;
     font-family: sans-serif;
     font-weight: 500;
     width: 450px;
-    border-radius: 10px;
+    border-radius: 20px;
+    border: 3px solid #BBB;
     overflow: hidden;
     margin: 20px;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
-    transition: 0.5s;
-    
+
     ${(props)=>(
         props.$select && 
         css`
             transition: border 0.3s ease-in-out;
-            border: 3px dotted #ff8c69;
-            animation: ${blink} 2s infinite;
-            
+            animation: ${blink} 2.5s infinite;
         `
     )};
 
@@ -51,9 +46,10 @@ const Container = styled.a<{$select: boolean}>`
         height: 250px;
         object-fit: cover;
     }
+    transition: 0.5s;
     &:hover{
+        transition: 0.5s;
         transform: scale(1.05);
-        
     }
 `
 
@@ -61,6 +57,7 @@ const Content = styled.div`
     /* margin-top: 0; */
     padding: 20px;
     background-color: #fff;
+
 `
 
 const Title = styled.div`
