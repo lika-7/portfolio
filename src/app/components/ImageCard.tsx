@@ -28,7 +28,7 @@ const Container = styled.a<{$select: boolean}>`
     font-weight: 500;
     width: 450px;
     border-radius: 20px;
-    border: 3px solid #BBB;
+    border: 3px solid transparent;
     overflow: hidden;
     margin: 20px;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
@@ -91,23 +91,29 @@ const Category = styled.ul`
 
 const ImageCard = ({ img, title, categories, src, hash }:ImageCardProps) => {
     const [select, setSelect] = useState<boolean>(false)
+    const [hashedUrl, setHashedUrl] = useState<string>()
+    const [srcUrl, setSrcUrl] = useState<string>()
 
     useEffect(() => {
-        const hashedUrl = hash ? hash.replace('#','') : ''
-        const srcUrl = src ? src.replace('https://','') : ''
-        
-        if(hashedUrl===srcUrl){
+        hash ? setHashedUrl(hash.replace('#','')) : ''
+        src ? setSrcUrl(src.replace('https://','')) : ''
+        if(hashedUrl && srcUrl && hashedUrl===srcUrl){
             console.log('hash', hashedUrl)
             setSelect(true)
+            const targetElement = document.getElementById(hashedUrl);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
         }
-    },[])
+
+    },[hashedUrl, srcUrl])
 
     const handleClick= () =>{
         setSelect(false)
     }
+
     return (
-        
-        <Container href={src} target="_blank" $select={select} onClick={handleClick}>
+        <Container id = {srcUrl} href={src} target="_blank" $select={select} onClick={handleClick}>
             <Image src={img || '/logo.png'} alt={title} width={0} height={0} sizes='auto'/>
             <Content>
                 <Title>{title}</Title>
