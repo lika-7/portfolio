@@ -114,7 +114,7 @@ const ImageCard = ({ img, title, categories, src, hash }:ImageCardProps) => {
 
     return (
         <Container id = {srcUrl} href={src} target="_blank" $select={select} onClick={handleClick}>
-            <Image src={img || '/logo.png'} alt={title} width={0} height={0} sizes='auto'/>
+            <Image src={img || '/logo.png'} alt={title} width={1000} height={1000}/>
             <Content>
                 <Title>{title}</Title>
                 <Category>
