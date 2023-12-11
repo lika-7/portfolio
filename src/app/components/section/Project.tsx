@@ -28,7 +28,6 @@ const Project = () => {
         const response = await fetch('/api/project');
         if (response.ok) {
           const result = await response.json();
-          
           const coversArray = result.map(project => {
             if(project.cover !== null){
               return project.cover.file.url
