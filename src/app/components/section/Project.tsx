@@ -30,7 +30,7 @@ const Project = () => {
           const result = await response.json();
           const coversArray = result.map(project => {
             if(project.cover !== null){
-              return project.cover.file.url
+              return project.cover.external.url
             }
             return project.cover
         })
