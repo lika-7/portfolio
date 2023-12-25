@@ -28,17 +28,23 @@ const Project = () => {
         const response = await fetch('/api/project');
         if (response.ok) {
           const result = await response.json();
-          const coversArray = result.map(project => {
+          const sortedResult = result.sort((a, b) => {
+            const titleA = parseInt(a.title.title[0].plain_text, 10); // 숫자로 변환
+            const titleB = parseInt(b.title.title[0].plain_text, 10);
+            return titleB - titleA; // 숫자로 된 문자열을 비교하여 정렬
+          });
+
+          const coversArray = sortedResult.map(project => {
             if(project.cover !== null){
               return project.cover.external.url
             }
             return project.cover
         })
-          const tagsArray = result.map(project => (
+          const tagsArray = sortedResult.map(project => (
             project.tag.multi_select.map(tag =>tag.name)
           ))
-          const titlesArray = result.map(project => project.title.title[0].plain_text)
-          const urlsArray = result.map(project => project.public_url)
+          const titlesArray = sortedResult.map(project => project.title.title[0].plain_text)
+          const urlsArray = sortedResult.map(project => project.public_url)
           setCover(coversArray)
           setTag(tagsArray)
           setName(titlesArray)
